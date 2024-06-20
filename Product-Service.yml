@@ -8,6 +8,17 @@ spring:
     password: MYSQL
     url: jdbc:mysql://localhost:3306/mysql
 
+
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 2MB  # Adjust max file size limit as needed
+      max-request-size: 2MB  # Adjust max request size limit as needed
+      file-size-threshold: 0
+      location: /tmp  # Location to store uploaded files, optional
+    
+
   jpa:
     hibernate:
       ddl-auto: update
